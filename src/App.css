@@ -1,0 +1,39 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*width: 100vw;*/
+  height: 100vh;
+  background-color: black;
+  color: whitesmoke;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: darkgoldenrod;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  padding: 1em;
+}
+
+main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+footer {
+  height: 5vh;
+  text-align: center;
+  background-color: darkgoldenrod;
+}

@@ -1,0 +1,20 @@
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+import Home from "./Home";
+import About from "./About";
+import Recipes from "./Recipes";
+
+function Main() {
+  return (
+    <main>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/recipes" component={Recipes} />
+      </Switch>
+    </main>
+  );
+}
+
+export default Main;
