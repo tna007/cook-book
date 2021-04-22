@@ -3,7 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <p>Copyrights 2021</p>
+      <p>
+        Copyrights © <a href="https://github.com/tna007">Anh To</a>{" "}
+        {new Date().getFullYear()}
+      </p>
     </footer>
   );
 };

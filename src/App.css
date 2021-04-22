@@ -24,6 +24,18 @@ nav ul li {
   padding: 1em;
 }
 
+a {
+  color: bisque;
+}
+a:visited {
+  color: purple;
+}
+a:focus {
+  color: lightcyan;
+}
+a:hover {
+  color: lightskyblue;
+}
 main {
   height: 80vh;
   display: flex;
