@@ -1,0 +1,48 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "avocado toast",
+      "ingredients": "avocado, bread, salt, pepper",
+      "image": "avo_toast.jpg",
+      "direction": [
+        {
+          "name": "step 1",
+          "text": "toast the bread"
+        },
+        {
+          "name": "step 2",
+          "text": "cut avo or smash it according to your preference"
+        },
+        {
+          "name": "step 3",
+          "text": "spread avo onto bread, sprinkle some salt and pepper to taste"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "avocado toast level 2",
+      "ingredients": "avocado, egg, bread, salt, pepper",
+      "image": "avo_toast2.jpg",
+      "direction": [
+        {
+          "name": "step 1",
+          "text": "pour water to the pan, enough to cover the bottom. Put eggs in when water is still cold, cover the pan. Boil in 5 mins "
+        },
+        {
+          "name": "step 2",
+          "text": "toast the bread"
+        },
+        {
+          "name": "step 3",
+          "text": "cut avo or smash it according to your preference, spread avo onto bread"
+        },
+        {
+          "name": "step 4",
+          "text": "take out the eggs and put it in cold water to cool down, cut the eggs or smash it according to your preference. Sprinkle some salt and pepper to taste"
+        }
+      ]
+    }
+  ]
+}
