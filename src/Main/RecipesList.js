@@ -17,10 +17,10 @@ function RecipesList({ recipes }) {
             <h3>Directions</h3>
             {recipe.direction.map((obj) => {
               return (
-                <ul>
-                  <li>{obj.name}</li>
-                  <li>{obj.text}</li>
-                </ul>
+                <div>
+                  <h4>{obj.name}</h4>
+                  <p>{obj.text}</p>
+                </div>
               );
             })}
           </div>
