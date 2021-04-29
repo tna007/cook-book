@@ -1,4 +1,5 @@
 import React from "react";
+import RecipeCard from "./RecipeCard";
 
 function RecipesList({ recipes }) {
   return (
@@ -7,15 +8,13 @@ function RecipesList({ recipes }) {
 
       {recipes.map((recipe) => {
         return (
-          <div key={recipe.id}>
-            <h2>{recipe.name}</h2>
-            <img src={`assets/img/${recipe.image}`} alt={recipe.name} />
-
-            <h3>Ingredients</h3>
-            <p>{recipe.ingredients}</p>
-
-            <h3>Directions</h3>
-            {recipe.direction.map((obj) => {
+          <RecipeCard
+            key={recipe.id}
+            name={recipe.name}
+            image={recipe.image}
+            alt={recipe.name}
+            ingredients={recipe.ingredients}
+            directions={recipe.direction.map((obj) => {
               return (
                 <div>
                   <h4>{obj.name}</h4>
@@ -23,7 +22,7 @@ function RecipesList({ recipes }) {
                 </div>
               );
             })}
-          </div>
+          />
         );
       })}
     </div>
