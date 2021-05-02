@@ -6,7 +6,18 @@ import RecipesList from "./RecipesList";
 
 const Recipes = () => {
   const [recipesDefault, setRecipesDefault] = useState([]);
-  // const [searchRecipe, setSearchRecipe] = useState([]);
+  const [searchRecipe, setSearchRecipe] = useState([]);
+  const [input, setInput] = useState("");
+
+  const searchHandler = (input) => {
+    const inputFiltered = recipesDefault.filter((recipe) => {
+      return recipe.name.toLowerCase().includes(input.toLowerCase());
+    });
+    console.log("this is input filtered", inputFiltered);
+    setInput(input);
+    setSearchRecipe(inputFiltered);
+  };
+  console.log("this is searched recipes", searchRecipe);
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -17,21 +28,12 @@ const Recipes = () => {
     };
     getRecipes();
   }, []);
-
-  console.log("this is all recipes by default ", recipesDefault);
-  // const searchHandler = async (input) => {
-  //   const inputFiltered = recipesDefault.filter((recipe) => {
-  //     return recipe.name.toLowerCase().includes(input.toLowerCase());
-  //   });
-  //   setInput(input);
-  //   setSearchRecipe(inputFiltered);
-  // };
+  console.log("this is default list ", recipesDefault);
 
   return (
     <section className="recipes">
-      {/* <p>{searchRecipe}</p> */}
-      <Search />
-      <RecipesList recipes={recipesDefault} />
+      <Search input={input} setKeyword={searchHandler} />
+      <RecipesList recipes={searchRecipe} />
     </section>
   );
 };
