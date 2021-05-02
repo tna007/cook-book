@@ -28,6 +28,7 @@ nav ul li {
 
 a {
   color: bisque;
+  cursor: pointer;
 }
 a:visited {
   color: purple;

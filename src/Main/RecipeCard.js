@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function RecipeCard({ name, image, ingredients, directions, link }) {
   return (
@@ -8,7 +9,8 @@ function RecipeCard({ name, image, ingredients, directions, link }) {
       <h3>Ingredients:</h3>
       <em>{ingredients}</em>
       <h3>{directions}</h3>
-      <a href={link}>More</a>
+      <Link to={`/${link}`}>More</Link>
+      {/* <a href={link}>More</a> */}
     </div>
   );
 }

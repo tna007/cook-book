@@ -4,7 +4,6 @@ import RecipeCard from "./RecipeCard";
 function RecipesList({ recipes }) {
   return (
     <div className="recipesList">
-      <h1>Recipes</h1>
       {recipes.map((recipe) => {
         if (recipes) {
           return (
@@ -14,7 +13,7 @@ function RecipesList({ recipes }) {
               image={recipe.image}
               alt={recipe.name}
               ingredients={recipe.ingredients}
-              directions={recipe.directions}
+              link={recipe.id}
             />
           );
         }
