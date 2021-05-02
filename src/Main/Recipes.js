@@ -24,7 +24,7 @@ const Recipes = () => {
       const resp = await axios.get("http://localhost:3001/recipes");
       const data = resp.data;
       setRecipesDefault(data);
-      // setSearchRecipe(data);
+      setSearchRecipe(data);
     };
     getRecipes();
   }, []);

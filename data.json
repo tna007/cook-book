@@ -46,9 +46,9 @@
     },
     {
       "id": 3,
-      "name": "avocado toast",
-      "ingredients": "avocado, bread, salt, pepper",
-      "image": "avo_toast.jpg",
+      "name": "chicken pho soup",
+      "ingredients": "chicken, coriander seed, salt, pepper",
+      "image": "chicken_pho.jpg",
       "direction": [
         {
           "name": "step 1",
@@ -66,9 +66,9 @@
     },
     {
       "id": 4,
-      "name": "avocado toast level 2",
-      "ingredients": "avocado, egg, bread, salt, pepper",
-      "image": "avo_toast2.jpg",
+      "name": "duck green curry",
+      "ingredients": "duck, green curry, eggplant, potato, salt, pepper",
+      "image": "green_curry.jpg",
       "direction": [
         {
           "name": "step 1",
