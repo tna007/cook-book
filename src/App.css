@@ -48,6 +48,7 @@ main {
 
 .recipes {
   width: 80%;
+  margin: auto;
 }
 
 #search {

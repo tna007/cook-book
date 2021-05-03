@@ -1,25 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import { Route, Switch } from "react-router-dom";
 
 import Search from "./Search";
 import RecipesList from "./RecipesList";
-// import RecipeSpa from "./RecipeSpa";
 
 const Recipes = () => {
   const [recipesDefault, setRecipesDefault] = useState([]);
   const [searchRecipe, setSearchRecipe] = useState([]);
-  const [input, setInput] = useState("");
-
-  const searchHandler = (input) => {
-    const inputFiltered = recipesDefault.filter((recipe) => {
-      return recipe.name.toLowerCase().includes(input.toLowerCase());
-    });
-    // console.log("this is input filtered", inputFiltered);
-    setInput(input);
-    setSearchRecipe(inputFiltered);
-  };
-  // console.log("this is searched recipes", searchRecipe);
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -30,21 +17,25 @@ const Recipes = () => {
     };
     getRecipes();
   }, []);
-  // console.log("this is default list ", recipesDefault);
+
+  const handleSearch = (e) => {
+    let searchInput = e.target.value;
+    console.log("this is input", searchInput);
+    const searchFiltered = recipesDefault.filter((recipe) => {
+      return recipe.name.toLowerCase().includes(searchInput.toLowerCase());
+    });
+    console.log("this is searched filtered", searchFiltered);
+    setSearchRecipe(searchFiltered);
+  };
 
   return (
-    <section className="recipes">
-      {/* <Switch>
-        <Route path="/:id">
-          <RecipeSpa />
-        </Route>
-        <Route path="/recipes"> */}
-      <Search input={input} setKeyword={searchHandler} />
-      <RecipesList recipes={searchRecipe} />
-      {/* </Route>
-      </Switch> */}
-      {/* <RecipeSpa /> */}
-    </section>
+    <div>
+      <Search search={handleSearch} />
+      <section className="recipes">
+        <RecipesList recipes={searchRecipe} />
+      </section>
+    </div>
   );
 };
+
 export default Recipes;
