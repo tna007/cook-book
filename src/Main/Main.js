@@ -5,6 +5,7 @@ import Home from "./Home";
 import About from "./About";
 import Recipes from "./Recipes";
 import RecipeSpa from "./RecipeSpa";
+import NewRecipe from "./NewRecipe";
 
 function Main() {
   return (
@@ -12,8 +13,9 @@ function Main() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/recipes" component={Recipes} />
-        <Route path="/:id" component={RecipeSpa} />
+        <Route path="/addRecipe" component={NewRecipe} />
         <Route path="/about" component={About} />
+        <Route path="/:id" component={RecipeSpa} />
       </Switch>
     </main>
   );

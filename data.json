@@ -3,19 +3,37 @@
     {
       "id": 1,
       "name": "avocado toast",
-      "ingredients": "avocado, bread, salt, pepper",
-      "image": "avo_toast.jpg",
+      "difficulty": "easy",
+      "ingredients": [
+        {
+          "name": "avocado",
+          "amount": "1"
+        },
+        {
+          "name": "bread",
+          "amount": "1"
+        },
+        {
+          "name": "salt",
+          "amount": "a pinch"
+        },
+        {
+          "name": "pepper",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/7GO11y7bznw",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "toast the bread"
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "cut avo or smash it according to your preference"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "spread avo onto bread, sprinkle some salt and pepper to taste"
         }
       ]
@@ -23,23 +41,45 @@
     {
       "id": 2,
       "name": "avocado toast level 2",
-      "ingredients": "avocado, egg, bread, salt, pepper",
-      "image": "avo_toast2.jpg",
+      "difficulty": "easy",
+      "ingredients": [
+        {
+          "name": "avocado",
+          "amount": "1"
+        },
+        {
+          "name": "bread",
+          "amount": "1"
+        },
+        {
+          "name": "egg",
+          "amount": "1"
+        },
+        {
+          "name": "salt",
+          "amount": "a pinch"
+        },
+        {
+          "name": "pepper",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/Hb5OfGzeKNk",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "pour water to the pan, enough to cover the bottom. Put eggs in when water is still cold, cover the pan. Boil in 5 mins "
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "toast the bread"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "cut avo or smash it according to your preference, spread avo onto bread"
         },
         {
-          "name": "step 4",
+          "step": 4,
           "text": "take out the eggs and put it in cold water to cool down, cut the eggs or smash it according to your preference. Sprinkle some salt and pepper to taste"
         }
       ]
@@ -47,19 +87,37 @@
     {
       "id": 3,
       "name": "chicken pho soup",
-      "ingredients": "chicken, coriander seed, salt, pepper",
-      "image": "chicken_pho.jpg",
+      "difficulty": "medium",
+      "ingredients": [
+        {
+          "name": "chicken",
+          "amount": "1"
+        },
+        {
+          "name": "coriander",
+          "amount": "1"
+        },
+        {
+          "name": "salt",
+          "amount": "a pinch"
+        },
+        {
+          "name": "pepper",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/L1ZhjK-R6uc",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "toast the bread"
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "cut avo or smash it according to your preference"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "spread avo onto bread, sprinkle some salt and pepper to taste"
         }
       ]
@@ -67,23 +125,41 @@
     {
       "id": 4,
       "name": "duck green curry",
-      "ingredients": "duck, green curry, eggplant, potato, salt, pepper",
-      "image": "green_curry.jpg",
+      "difficulty": "medium",
+      "ingredients": [
+        {
+          "name": "duck",
+          "amount": "1"
+        },
+        {
+          "name": "green curry paste",
+          "amount": "1"
+        },
+        {
+          "name": "potato",
+          "amount": "3"
+        },
+        {
+          "name": "eggplant",
+          "amount": "1"
+        }
+      ],
+      "image": "https://source.unsplash.com/ojposW2CPno",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "pour water to the pan, enough to cover the bottom. Put eggs in when water is still cold, cover the pan. Boil in 5 mins "
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "toast the bread"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "cut avo or smash it according to your preference, spread avo onto bread"
         },
         {
-          "name": "step 4",
+          "step": 4,
           "text": "take out the eggs and put it in cold water to cool down, cut the eggs or smash it according to your preference. Sprinkle some salt and pepper to taste"
         }
       ]
@@ -91,26 +167,74 @@
     {
       "id": 5,
       "name": "blueberry oatmeal",
-      "ingredients": "blueberry, oat, yogurt, cinamon, milk",
-      "image": "blueberry_oatmeal.jpg",
-      "direction": [
+      "difficulty": "easy",
+      "ingredients": [
         {
-          "name": "step 1",
-          "text": "pour water to the pan, enough to cover the bottom. Put eggs in when water is still cold, cover the pan. Boil in 5 mins "
+          "name": "blueberry",
+          "amount": "1 cup"
         },
         {
-          "name": "step 2",
+          "name": "oat",
+          "amount": "1 cup"
+        },
+        {
+          "name": "milk",
+          "amount": "2 cups"
+        },
+        {
+          "name": "cinamon",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/fKbByfYa4ZI",
+      "direction": [
+        {
+          "step": 1,
           "text": "toast the bread"
         },
         {
-          "name": "step 3",
-          "text": "cut avo or smash it according to your preference, spread avo onto bread"
+          "step": 2,
+          "text": "cut avo or smash it according to your preference"
         },
         {
-          "name": "step 4",
-          "text": "take out the eggs and put it in cold water to cool down, cut the eggs or smash it according to your preference. Sprinkle some salt and pepper to taste"
+          "step": 3,
+          "text": "spread avo onto bread, sprinkle some salt and pepper to taste"
         }
       ]
+    },
+    {
+      "name": "eggs benedict",
+      "difficulty": "easy",
+      "image": "https://source.unsplash.com/iubgGyTICpQ",
+      "ingredients": [
+        {
+          "name": "egg",
+          "amount": "2"
+        },
+        {
+          "name": "bread",
+          "amount": "1"
+        },
+        {
+          "name": "vinegar",
+          "amount": "1/2 tsp"
+        }
+      ],
+      "direction": [
+        {
+          "step": 1,
+          "text": "Put eggs to cold water bring to a boil"
+        },
+        {
+          "step": 2,
+          "text": "Pour vinegar to the boiling water"
+        },
+        {
+          "step": 3,
+          "text": "Toast bread"
+        }
+      ],
+      "id": 6
     }
   ]
 }

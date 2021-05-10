@@ -6,33 +6,30 @@ import RecipesList from "./RecipesList";
 
 const Recipes = () => {
   const [recipesDefault, setRecipesDefault] = useState([]);
-  const [searchRecipe, setSearchRecipe] = useState([]);
+  const [searchRecipe, setSearchRecipe] = useState("");
 
   useEffect(() => {
     const getRecipes = async () => {
       const resp = await axios.get("http://localhost:3001/recipes");
       const data = resp.data;
       setRecipesDefault(data);
-      setSearchRecipe(data);
     };
     getRecipes();
-  }, []);
+  }, [searchRecipe]);
 
-  const handleSearch = (e) => {
-    let searchInput = e.target.value;
-    console.log("this is input", searchInput);
-    const searchFiltered = recipesDefault.filter((recipe) => {
-      return recipe.name.toLowerCase().includes(searchInput.toLowerCase());
-    });
-    console.log("this is searched filtered", searchFiltered);
-    setSearchRecipe(searchFiltered);
-  };
+  const searchFiltered = recipesDefault.filter((recipe) => {
+    return recipe.name.toLowerCase().includes(searchRecipe.toLowerCase());
+  });
 
   return (
     <div>
-      <Search search={handleSearch} />
+      <Search
+        search={(e) => {
+          setSearchRecipe(e.target.value);
+        }}
+      />
       <section className="recipes">
-        <RecipesList recipes={searchRecipe} />
+        <RecipesList recipes={searchFiltered} />
       </section>
     </div>
   );
