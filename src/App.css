@@ -46,7 +46,12 @@ main {
   align-items: center;
   margin: auto;
 }
-
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1em;
+}
 .recipes {
   width: 80%;
   margin: auto;

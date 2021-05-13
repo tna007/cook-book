@@ -65,8 +65,8 @@ function NewRecipe() {
 
   return (
     <div className="newRecipe">
-      <h2>Add New Recipe</h2>
       <Form onSubmit={sendData}>
+        <Form.Label className="mb-3">Add New Recipe</Form.Label>
         <Form.Group controlId="name" className="mb-3">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -155,14 +155,7 @@ function NewRecipe() {
                 onChange={(e) => handleChange(e, i)}
               ></Form.Control>
 
-              <Row className="align-items-end">
-                <Col xs="auto" className="mb-3">
-                  {steps.length !== 1 && (
-                    <Button variant="outline-danger" onClick={() => delStep(i)}>
-                      Remove
-                    </Button>
-                  )}
-                </Col>
+              <Row>
                 <Col xs="auto" className="mb-3">
                   {steps.length - 1 === i && (
                     <Button variant="outline-success" onClick={addStep}>
@@ -170,14 +163,22 @@ function NewRecipe() {
                     </Button>
                   )}
                 </Col>
+                <Col xs="auto" className="mb-3">
+                  {steps.length !== 1 && (
+                    <Button variant="outline-danger" onClick={() => delStep(i)}>
+                      Remove
+                    </Button>
+                  )}
+                </Col>
               </Row>
             </Form.Group>
           );
         })}
-
-        <Button variant="success" type="submit">
-          Submit
-        </Button>
+        <Col align="center">
+          <Button className="mb-2" variant="success" type="submit">
+            Submit
+          </Button>
+        </Col>
       </Form>
     </div>
   );
