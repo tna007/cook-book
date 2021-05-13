@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 function NewRecipe() {
-  // const [newRecipes, setNewRecipes] = useState([]);
   const [input, setInput] = useState({
     name: "",
     difficulty: "",
@@ -63,56 +64,80 @@ function NewRecipe() {
   };
 
   return (
-    <div>
+    <div className="newRecipe">
       <h2>Add New Recipe</h2>
       <Form onSubmit={sendData}>
-        <Form.Group>
-          <Form.Label htmlFor="name">Name</Form.Label>
+        <Form.Group controlId="name" className="mb-3">
+          <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
             name="name"
+            className="mb-2"
             onChange={updateInput}
           ></Form.Control>
         </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="difficulty">Difficulty</Form.Label>
+        <Form.Group controlId="difficulty" className="mb-3">
+          <Form.Label>Difficulty</Form.Label>
           <Form.Control
             type="text"
             name="difficulty"
+            className="mb-2"
             onChange={updateInput}
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label htmlFor="image">Image</Form.Label>
+        <Form.Group controlId="image" className="mb-3">
+          <Form.Label>Image(URL)</Form.Label>
           <Form.Control
             type="text"
             name="image"
+            className="mb-2"
             onChange={updateInput}
           ></Form.Control>
         </Form.Group>
 
         {ingredients.map((item, i) => {
           return (
-            <Form.Group key={i}>
-              <Form.Label htmlFor="name">Ingredient</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                onChange={(e) => handleChange(e, i)}
-              ></Form.Control>
-              <Form.Label htmlFor="amount">Amount</Form.Label>
-              <Form.Control
-                type="text"
-                name="amount"
-                onChange={(e) => handleChange(e, i)}
-              ></Form.Control>
-              {ingredients.length !== 1 && (
-                <Button onClick={() => delIngredient(i)}>Remove</Button>
-              )}
-              {ingredients.length - 1 === i && (
-                <Button onClick={addIngredient}>Add</Button>
-              )}
+            <Form.Group key={i} controlId="ingredient" className="mb-3">
+              <Row className="align-items-end">
+                <Col xs="auto">
+                  <Form.Label>Ingredient</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="name"
+                    className="mb-2"
+                    onChange={(e) => handleChange(e, i)}
+                  ></Form.Control>
+                </Col>
+
+                <Col xs="auto">
+                  <Form.Label>Amount</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="amount"
+                    className="mb-2"
+                    onChange={(e) => handleChange(e, i)}
+                  ></Form.Control>
+                </Col>
+
+                <Col className="mb-2">
+                  {ingredients.length !== 1 && (
+                    <Button
+                      variant="outline-danger"
+                      onClick={() => delIngredient(i)}
+                    >
+                      Remove
+                    </Button>
+                  )}
+                </Col>
+                <Col className="mb-2">
+                  {ingredients.length - 1 === i && (
+                    <Button variant="outline-success" onClick={addIngredient}>
+                      Add
+                    </Button>
+                  )}
+                </Col>
+              </Row>
             </Form.Group>
           );
         })}
@@ -120,21 +145,39 @@ function NewRecipe() {
         {steps.map((item, i) => {
           return (
             <Form.Group key={i}>
-              <Form.Label htmlFor="text">Step {i + 1}</Form.Label>
+              <Form.Label>Step {i + 1}</Form.Label>
+
               <Form.Control
-                type="text"
+                as="textarea"
+                rows={3}
                 name="text"
+                className="mb-2"
                 onChange={(e) => handleChange(e, i)}
               ></Form.Control>
-              {steps.length !== 1 && (
-                <Button onClick={() => delStep(i)}>Remove</Button>
-              )}
-              {steps.length - 1 === i && <Button onClick={addStep}>Add</Button>}
+
+              <Row className="align-items-end">
+                <Col xs="auto" className="mb-3">
+                  {steps.length !== 1 && (
+                    <Button variant="outline-danger" onClick={() => delStep(i)}>
+                      Remove
+                    </Button>
+                  )}
+                </Col>
+                <Col xs="auto" className="mb-3">
+                  {steps.length - 1 === i && (
+                    <Button variant="outline-success" onClick={addStep}>
+                      Add
+                    </Button>
+                  )}
+                </Col>
+              </Row>
             </Form.Group>
           );
         })}
-        <Button type="submit">Submit</Button>
-        <pre>{JSON.stringify(steps, null, 2)}</pre>
+
+        <Button variant="success" type="submit">
+          Submit
+        </Button>
       </Form>
     </div>
   );

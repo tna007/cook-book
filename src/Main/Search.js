@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = ({ search }) => {
   return (
-    <div id="search">
+    <section className="search">
       <input
         type="text"
         placeholder="Search recipes"
@@ -10,7 +10,7 @@ const Search = ({ search }) => {
         // onChange={(e) => setKeyword(e.target.value)}
         onChange={search}
       />
-    </div>
+    </section>
   );
 };
 

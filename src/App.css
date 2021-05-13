@@ -2,19 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #333; */
+  background-color: #333;
   color: whitesmoke;
 }
 
-.container {
+.App {
   background-color: #333;
+  font-family: "RocknRoll One";
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: darkgoldenrod;
+  background: darkgoldenrod fixed;
 }
 
 nav ul {
@@ -51,7 +52,7 @@ main {
   margin: auto;
 }
 
-#search {
+/* #search {
   padding: 2em;
   display: flex;
   align-items: center;
@@ -61,7 +62,7 @@ main {
   width: 50%;
   padding: 0.5em;
   font-size: 1em;
-}
+} */
 .recipesList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

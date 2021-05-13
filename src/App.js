@@ -4,11 +4,12 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
-    <div className="container">
+    <div className="App">
       <Router>
         <Header />
         <Main />
