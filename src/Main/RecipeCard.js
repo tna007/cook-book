@@ -1,14 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 
-function RecipeCard({
-  name,
-  image,
-  difficulty,
-  ingredients,
-  directions,
-  link,
-}) {
+function RecipeCard({ name, image, difficulty, ingredients, directions, id }) {
+  let { url } = useRouteMatch();
   return (
     <div className="recipe">
       <h2>{name}</h2>
@@ -16,7 +10,7 @@ function RecipeCard({
       <h3>Difficuty: {difficulty}</h3>
       <em>{ingredients}</em>
       <h3>{directions}</h3>
-      <Link to={`/${link}`}>More</Link>
+      <Link to={`${url}/${id}`}>More</Link>
     </div>
   );
 }

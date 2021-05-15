@@ -4,7 +4,6 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Recipes from "./Recipes";
-import RecipeSpa from "./RecipeSpa";
 import NewRecipe from "./NewRecipe";
 
 function Main() {
@@ -15,7 +14,6 @@ function Main() {
         <Route path="/recipes" component={Recipes} />
         <Route path="/addRecipe" component={NewRecipe} />
         <Route path="/about" component={About} />
-        <Route path="/:id" component={RecipeSpa} />
       </Switch>
     </main>
   );

@@ -13,7 +13,7 @@ function RecipesList({ recipes }) {
               image={recipe.image}
               alt={recipe.name}
               difficulty={recipe.difficulty}
-              link={recipe.id}
+              id={recipe.id}
             />
           );
         }

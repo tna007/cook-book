@@ -1,16 +1,20 @@
 import React from "react";
+import { Navbar, NavbarBrand } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
-import Nav from "./Nav";
-
-function Logo() {
-  return <div className="logo">Logo</div>;
-}
+import Navs from "./Navs";
 
 function Header() {
   return (
     <header>
-      <Logo />
-      <Nav />
+      <Navbar navbar="light" variant="light">
+        <div className="container-fluid">
+          <LinkContainer to="/">
+            <NavbarBrand href="#">Logo</NavbarBrand>
+          </LinkContainer>
+          <Navs />
+        </div>
+      </Navbar>
     </header>
   );
 }
