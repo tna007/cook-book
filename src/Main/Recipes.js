@@ -6,6 +6,8 @@ import RecipesList from "./RecipesList";
 import RecipeSpa from "./RecipeSpa";
 
 import { Route, Switch, useRouteMatch } from "react-router";
+import { Container, Figure } from "react-bootstrap";
+import FigureCaption from "react-bootstrap/esm/FigureCaption";
 
 const Recipes = () => {
   const [recipesDefault, setRecipesDefault] = useState([]);
@@ -29,11 +31,23 @@ const Recipes = () => {
     <div>
       <Switch>
         <Route path={url} exact>
+          <Container fluid className="text-center mx-auto">
+            <Figure>
+              <blockquote className="blockquote">
+                <p>In cooking, you’ve got to have a what-the-hell attitude.</p>
+              </blockquote>
+              <FigureCaption className="blockquote-footer">
+                <cite title="source">Julia Child</cite>
+              </FigureCaption>
+            </Figure>
+          </Container>
+
           <Search
             search={(e) => {
               setSearchRecipe(e.target.value);
             }}
           />
+
           <section className="recipes">
             <RecipesList recipes={searchFiltered} />
           </section>

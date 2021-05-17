@@ -235,6 +235,84 @@
         }
       ],
       "id": 6
+    },
+    {
+      "name": "Ultimate chocolate cake",
+      "difficulty": "Medium",
+      "image": "https://source.unsplash.com/z-Lvc04qYaQ",
+      "ingredients": [
+        {
+          "amount": "160g",
+          "name": "all purpose flour"
+        },
+        {
+          "amount": "60g",
+          "name": "cacao powder"
+        },
+        {
+          "amount": "160g",
+          "name": "fine sugar"
+        },
+        {
+          "amount": "5g",
+          "name": "baking powder"
+        },
+        {
+          "amount": "3g",
+          "name": "baking soda"
+        },
+        {
+          "amount": "1",
+          "name": "egg"
+        },
+        {
+          "amount": "1",
+          "name": "egg yolk"
+        },
+        {
+          "amount": "100g",
+          "name": "yogurt"
+        },
+        {
+          "amount": "150g",
+          "name": "milk"
+        },
+        {
+          "amount": "75g",
+          "name": "butter"
+        },
+        {
+          "amount": "5ml",
+          "name": "vanilla"
+        }
+      ],
+      "direction": [
+        {
+          "step": 1,
+          "text": "Prep oven 175C and baking tray"
+        },
+        {
+          "step": 2,
+          "text": "Mix all dry ingredients together"
+        },
+        {
+          "step": 3,
+          "text": "Mix well all wet ingredients together and pour into the dry ones until no lumps visible"
+        },
+        {
+          "step": 4,
+          "text": "Pour the mixture to baking tray and bake in 20-25mins"
+        },
+        {
+          "step": 5,
+          "text": "Take the cake out and let it cool on a baking rack in 10mins"
+        },
+        {
+          "step": 6,
+          "text": "Decor the cake as your preference"
+        }
+      ],
+      "id": 7
     }
   ]
 }

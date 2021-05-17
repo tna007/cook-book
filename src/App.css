@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #333;
-  color: whitesmoke;
+  color: rgba(245, 245, 245, 0.925);
 }
 
 .App {
@@ -20,6 +20,13 @@ header {
 
 nav {
   width: 80%;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #333;
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: whitesmoke;
 }
 
 a {
@@ -39,7 +46,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 3em auto;
 }
 h2 {
   font-size: 1.5em;
@@ -47,26 +54,13 @@ h2 {
 h3 {
   font-size: 1em;
 }
-.recipes {
-  width: 80%;
-  margin: auto;
-}
 
 .recipesList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
-  /* display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column; */
 }
 
-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
 footer {
   display: flex;
   justify-content: center;

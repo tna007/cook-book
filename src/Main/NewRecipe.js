@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 function NewRecipe() {
   const [input, setInput] = useState({
     name: "",
-    difficulty: "",
+    difficulty: "Easy",
     image: "",
     ingredients: [],
     direction: [],
@@ -58,9 +58,8 @@ function NewRecipe() {
 
   const sendData = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:3001/recipes", input)
-      .then(() => window.location.reload());
+    axios.post("http://localhost:3001/recipes", input);
+    // .then(() => window.location.reload());
   };
 
   return (
@@ -77,13 +76,18 @@ function NewRecipe() {
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId="difficulty" className="mb-3">
-          <Form.Label>Difficulty</Form.Label>
+          <Form.Label>Choose difficulty</Form.Label>
           <Form.Control
+            as="select"
             type="text"
             name="difficulty"
             className="mb-2"
             onChange={updateInput}
-          ></Form.Control>
+          >
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Difficult</option>
+          </Form.Control>
         </Form.Group>
 
         <Form.Group controlId="image" className="mb-3">
@@ -101,20 +105,20 @@ function NewRecipe() {
             <Form.Group key={i} controlId="ingredient" className="mb-3">
               <Row className="align-items-end">
                 <Col xs="auto">
-                  <Form.Label>Ingredient</Form.Label>
+                  <Form.Label>Amount</Form.Label>
                   <Form.Control
                     type="text"
-                    name="name"
+                    name="amount"
                     className="mb-2"
                     onChange={(e) => handleChange(e, i)}
                   ></Form.Control>
                 </Col>
 
                 <Col xs="auto">
-                  <Form.Label>Amount</Form.Label>
+                  <Form.Label>Ingredient</Form.Label>
                   <Form.Control
                     type="text"
-                    name="amount"
+                    name="name"
                     className="mb-2"
                     onChange={(e) => handleChange(e, i)}
                   ></Form.Control>

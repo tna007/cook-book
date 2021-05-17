@@ -7,7 +7,7 @@ import Navs from "./Navs";
 function Header() {
   return (
     <header>
-      <Navbar navbar="light" variant="light">
+      <Navbar variant="light">
         <div className="container-fluid">
           <LinkContainer to="/">
             <NavbarBrand href="#">Logo</NavbarBrand>
