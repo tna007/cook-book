@@ -64,7 +64,11 @@ function NewRecipe() {
 
   return (
     <div className="newRecipe">
-      <Form onSubmit={sendData}>
+      <Form
+        action="https://just-cook.herokuapp.com/test"
+        method="POST"
+        onSubmit={sendData}
+      >
         <Form.Label className="mb-3">Add New Recipe</Form.Label>
         <Form.Group controlId="name" className="mb-3">
           <Form.Label>Name</Form.Label>
@@ -79,7 +83,6 @@ function NewRecipe() {
           <Form.Label>Choose difficulty</Form.Label>
           <Form.Control
             as="select"
-            type="text"
             name="difficulty"
             className="mb-2"
             onChange={updateInput}
