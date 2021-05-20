@@ -7,7 +7,7 @@ function Navs() {
   return (
     <Nav>
       <NavItem>
-        <IndexLinkContainer to="/cook-book">
+        <IndexLinkContainer to="/">
           <NavLink>Home</NavLink>
         </IndexLinkContainer>
       </NavItem>

@@ -25,7 +25,7 @@ const About = () => {
               <a
                 href="https://github.com/tna007/cook-book"
                 target="_blank"
-                rel="norefferer"
+                rel="noreferrer"
                 className="button btn project-btn"
               >
                 <i className="fa fa-book"></i>Project

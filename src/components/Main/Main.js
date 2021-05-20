@@ -11,7 +11,7 @@ function Main() {
     <main>
       {/* <BrowserRouter basename="/cook-book"> */}
       <Switch>
-        <Route path="/cook-book" exact component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/recipes" component={Recipes} />
         <Route path="/addRecipe" component={NewRecipe} />
         <Route path="/about" component={About} />
