@@ -11,13 +11,13 @@ const About = () => {
             <h1 className="responsive-headline">Anh To</h1>
           </Fade>
           <Fade bottom duration={1200}>
-            <h3>
+            <p>
               Hey! Glad to see you here. I am a web development in progress and
               I use ReactJS and PHP mainly as my programming languages. This
               project is meant to be a simple cook book that can be used as a
               recipes browser for everyone in everyday. You're cooking something
               today?
-            </h3>
+            </p>
           </Fade>
           <hr />
           <Fade bottom duration={2000}>
