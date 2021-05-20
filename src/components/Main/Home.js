@@ -10,7 +10,7 @@ const Home = () => {
       fluid
     >
       <Row className="ms-5 mb-4">
-        <Fade left>
+        <Fade left duration={1800}>
           <h1>Cook - Eat - Repeat!</h1>
           <p>Thinking about what to cook today? You're at the right place.</p>
         </Fade>

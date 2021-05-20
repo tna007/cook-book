@@ -10,7 +10,12 @@ function Header() {
       <Navbar variant="light">
         <div className="container-fluid">
           <LinkContainer to="/">
-            <NavbarBrand href="#">Logo</NavbarBrand>
+            <NavbarBrand href="#">
+              <img
+                className="logo"
+                src="./assets/img/original-recipe.png"
+              ></img>
+            </NavbarBrand>
           </LinkContainer>
           <Navs />
         </div>

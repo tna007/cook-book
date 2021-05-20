@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: darkgoldenrod fixed;
+  background: goldenrod fixed;
 }
 .jumbotron {
   background-image: url("https://source.unsplash.com/eeqbbemH9-c");
@@ -53,10 +53,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 3em auto; */
+  /* margin-bottom: 3em; */
   position: relative;
   overflow: hidden;
-  min-height: 500px;
+  min-height: 82vh;
   background: transparent;
 }
 
@@ -75,6 +75,16 @@ h3 {
 p {
   font-family: "KoHo";
   font-size: 1.1rem;
+}
+.logo {
+  width: 100px;
+  height: 50px;
+  object-fit: contain;
+}
+
+img {
+  max-height: 300px;
+  object-fit: cover;
 }
 .recipesList {
   display: grid;
@@ -126,5 +136,4 @@ footer {
   align-items: flex-start;
   text-align: center;
   background-color: darkgoldenrod;
-  margin-top: 5em;
 }

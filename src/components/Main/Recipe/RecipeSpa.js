@@ -55,7 +55,7 @@ function RecipeSpa() {
       );
     });
     recipeData = (
-      <Container>
+      <Container className="mt-5 mb-5">
         <Row className="mb-3">
           <h2>{recipe.name}</h2>
         </Row>
@@ -90,7 +90,9 @@ function RecipeSpa() {
           </Col>
         </Row>
 
-        <Button onClick={() => history.goBack()}>Back</Button>
+        <Button variant="info" onClick={() => history.goBack()}>
+          Back
+        </Button>
       </Container>
     );
   } else {

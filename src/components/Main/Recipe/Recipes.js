@@ -31,7 +31,7 @@ const Recipes = () => {
     <div>
       <Switch>
         <Route path={url} exact>
-          <Container fluid className="text-center mx-auto">
+          <Container fluid className="text-center mx-auto mt-5">
             <Figure>
               <blockquote className="blockquote">
                 <p>In cooking, you’ve got to have a what-the-hell attitude.</p>
@@ -48,7 +48,7 @@ const Recipes = () => {
             }}
           />
 
-          <section className="recipes">
+          <section className="recipes mb-5">
             <RecipesList recipes={searchFiltered} />
           </section>
         </Route>
