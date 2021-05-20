@@ -10,7 +10,7 @@ function RecipeCard({ name, image, difficulty, ingredients, directions, id }) {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
-          Difficuty: <em>{difficulty}</em>
+          Difficulty: <em>{difficulty}</em>
         </Card.Text>
         <Card.Text>
           <em>{ingredients}</em>

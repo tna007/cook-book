@@ -10,19 +10,25 @@ function RecipeSpa() {
   let { id } = useParams();
   let history = useHistory();
 
-  useEffect(() => {
-    // if (!recipe) {
-    const getRecipe = async () => {
-      const resp = await axios.get("http://localhost:3001/recipes/" + id);
-      const data = resp.data;
-      console.log("this is spa ", data);
-      setRecipe(data);
-      setDirections(data.direction);
-      setIngredients(data.ingredients);
-    };
-    getRecipe();
-    // }
-  }, [id]);
+  useEffect(
+    () => {
+      // if (!recipe) {
+      const getRecipe = async () => {
+        const resp = await axios.get(
+          "http://just-cook.herokuapp.com/recipes/" + id
+        );
+        const data = resp.data;
+        console.log("this is spa ", data);
+        setRecipe(data);
+        setDirections(data.direction);
+        setIngredients(data.ingredients);
+      };
+      getRecipe();
+      // }
+    },
+    [id],
+    [recipe]
+  );
 
   console.log("this is direction ", recipe);
   let recipeData;
@@ -30,18 +36,20 @@ function RecipeSpa() {
   if (recipe) {
     let direction = directions.map((obj, i) => {
       return (
-        <div key={obj.step}>
-          <em>Step {i + 1}</em>
-          <p>{obj.text}</p>
-        </div>
+        obj.text !== "" && (
+          <div key={obj.step}>
+            <em>Step {i + 1}</em>
+            <p>{obj.text}</p>
+          </div>
+        )
       );
     });
 
     let ingredient = ingredients.map((item) => {
       return (
-        <div key={item.name}>
+        <div key={item.ingredientName}>
           <p>
-            {item.amount} {item.name}
+            {item.amount} {item.ingredientName}
           </p>
         </div>
       );
@@ -52,7 +60,7 @@ function RecipeSpa() {
           <h2>{recipe.name}</h2>
         </Row>
         <Row className="mt-1 mb-3">
-          <Col xs={7} md={4}>
+          <Col>
             <Image
               src={recipe.image}
               alt={recipe.name}
@@ -61,23 +69,24 @@ function RecipeSpa() {
             />
           </Col>
 
-          <Col xs={6} md={4} className="mt-1">
+          <Col className="ms-3">
             <Row>
-              <strong>
+              <strong className="mb-2">
                 <u className="lead">Ingredients</u>
               </strong>
-              {ingredient}
+              <p className="mb-2">{ingredient}</p>
             </Row>
             <Row>
               <em>Difficulty: {recipe.difficulty}</em>
             </Row>
           </Col>
-
-          <Col className="mt-1">
+        </Row>
+        <Row>
+          <Col>
             <strong>
               <u className="lead">Directions</u>
             </strong>
-            {direction}
+            <p className="mt-4 mb-5">{direction}</p>
           </Col>
         </Row>
 

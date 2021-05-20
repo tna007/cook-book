@@ -58,18 +58,18 @@ function NewRecipe() {
 
   const sendData = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3001/recipes", input);
+    axios.post("http://just-cook.herokuapp.com/add", input);
     // .then(() => window.location.reload());
   };
 
   return (
     <div className="newRecipe">
       <Form
-        action="https://just-cook.herokuapp.com/test"
-        method="POST"
+        // action="http://just-cook.herokuapp.com/add"
+        // method="POST"
         onSubmit={sendData}
       >
-        <Form.Label className="mb-3">Add New Recipe</Form.Label>
+        <h2 className="mt-5 mb-3">Add New Recipe</h2>
         <Form.Group controlId="name" className="mb-3">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -148,7 +148,7 @@ function NewRecipe() {
             </Form.Group>
           );
         })}
-        <p>Directions</p>
+        <h3>Directions</h3>
         {steps.map((item, i) => {
           return (
             <Form.Group key={i}>

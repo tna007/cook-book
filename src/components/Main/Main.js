@@ -3,8 +3,8 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
-import Recipes from "./Recipes";
-import NewRecipe from "./NewRecipe";
+import Recipes from "./Recipe/Recipes";
+import NewRecipe from "./Recipe/NewRecipe";
 
 function Main() {
   return (

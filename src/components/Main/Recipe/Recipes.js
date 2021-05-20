@@ -15,7 +15,7 @@ const Recipes = () => {
 
   useEffect(() => {
     const getRecipes = async () => {
-      const resp = await axios.get("http://localhost:3001/recipes");
+      const resp = await axios.get("http://just-cook.herokuapp.com/recipes/");
       const data = resp.data;
       setRecipesDefault(data);
     };
