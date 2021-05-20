@@ -3,19 +3,37 @@
     {
       "id": 1,
       "name": "avocado toast",
-      "ingredients": "avocado, bread, salt, pepper",
-      "image": "avo_toast.jpg",
+      "difficulty": "easy",
+      "ingredients": [
+        {
+          "name": "avocado",
+          "amount": "1"
+        },
+        {
+          "name": "bread",
+          "amount": "1"
+        },
+        {
+          "name": "salt",
+          "amount": "a pinch"
+        },
+        {
+          "name": "pepper",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/7GO11y7bznw",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "toast the bread"
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "cut avo or smash it according to your preference"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "spread avo onto bread, sprinkle some salt and pepper to taste"
         }
       ]
@@ -23,70 +41,278 @@
     {
       "id": 2,
       "name": "avocado toast level 2",
-      "ingredients": "avocado, egg, bread, salt, pepper",
-      "image": "avo_toast2.jpg",
+      "difficulty": "easy",
+      "ingredients": [
+        {
+          "name": "avocado",
+          "amount": "1"
+        },
+        {
+          "name": "bread",
+          "amount": "1"
+        },
+        {
+          "name": "egg",
+          "amount": "1"
+        },
+        {
+          "name": "salt",
+          "amount": "a pinch"
+        },
+        {
+          "name": "pepper",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/Hb5OfGzeKNk",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "pour water to the pan, enough to cover the bottom. Put eggs in when water is still cold, cover the pan. Boil in 5 mins "
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "toast the bread"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "cut avo or smash it according to your preference, spread avo onto bread"
         },
         {
-          "name": "step 4",
+          "step": 4,
           "text": "take out the eggs and put it in cold water to cool down, cut the eggs or smash it according to your preference. Sprinkle some salt and pepper to taste"
         }
       ]
     },
     {
       "id": 3,
-      "name": "avocado toast",
-      "ingredients": "avocado, bread, salt, pepper",
-      "image": "avo_toast.jpg",
+      "name": "chicken pho soup",
+      "difficulty": "medium",
+      "ingredients": [
+        {
+          "name": "chicken",
+          "amount": "1"
+        },
+        {
+          "name": "coriander",
+          "amount": "1"
+        },
+        {
+          "name": "salt",
+          "amount": "a pinch"
+        },
+        {
+          "name": "pepper",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/L1ZhjK-R6uc",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "toast the bread"
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "cut avo or smash it according to your preference"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "spread avo onto bread, sprinkle some salt and pepper to taste"
         }
       ]
     },
     {
       "id": 4,
-      "name": "avocado toast level 2",
-      "ingredients": "avocado, egg, bread, salt, pepper",
-      "image": "avo_toast2.jpg",
+      "name": "duck green curry",
+      "difficulty": "medium",
+      "ingredients": [
+        {
+          "name": "duck",
+          "amount": "1"
+        },
+        {
+          "name": "green curry paste",
+          "amount": "1"
+        },
+        {
+          "name": "potato",
+          "amount": "3"
+        },
+        {
+          "name": "eggplant",
+          "amount": "1"
+        }
+      ],
+      "image": "https://source.unsplash.com/ojposW2CPno",
       "direction": [
         {
-          "name": "step 1",
+          "step": 1,
           "text": "pour water to the pan, enough to cover the bottom. Put eggs in when water is still cold, cover the pan. Boil in 5 mins "
         },
         {
-          "name": "step 2",
+          "step": 2,
           "text": "toast the bread"
         },
         {
-          "name": "step 3",
+          "step": 3,
           "text": "cut avo or smash it according to your preference, spread avo onto bread"
         },
         {
-          "name": "step 4",
+          "step": 4,
           "text": "take out the eggs and put it in cold water to cool down, cut the eggs or smash it according to your preference. Sprinkle some salt and pepper to taste"
         }
       ]
+    },
+    {
+      "id": 5,
+      "name": "blueberry oatmeal",
+      "difficulty": "easy",
+      "ingredients": [
+        {
+          "name": "blueberry",
+          "amount": "1 cup"
+        },
+        {
+          "name": "oat",
+          "amount": "1 cup"
+        },
+        {
+          "name": "milk",
+          "amount": "2 cups"
+        },
+        {
+          "name": "cinamon",
+          "amount": "a pinch"
+        }
+      ],
+      "image": "https://source.unsplash.com/fKbByfYa4ZI",
+      "direction": [
+        {
+          "step": 1,
+          "text": "toast the bread"
+        },
+        {
+          "step": 2,
+          "text": "cut avo or smash it according to your preference"
+        },
+        {
+          "step": 3,
+          "text": "spread avo onto bread, sprinkle some salt and pepper to taste"
+        }
+      ]
+    },
+    {
+      "name": "eggs benedict",
+      "difficulty": "easy",
+      "image": "https://source.unsplash.com/iubgGyTICpQ",
+      "ingredients": [
+        {
+          "name": "egg",
+          "amount": "2"
+        },
+        {
+          "name": "bread",
+          "amount": "1"
+        },
+        {
+          "name": "vinegar",
+          "amount": "1/2 tsp"
+        }
+      ],
+      "direction": [
+        {
+          "step": 1,
+          "text": "Put eggs to cold water bring to a boil"
+        },
+        {
+          "step": 2,
+          "text": "Pour vinegar to the boiling water"
+        },
+        {
+          "step": 3,
+          "text": "Toast bread"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Ultimate chocolate cake",
+      "difficulty": "Medium",
+      "image": "https://source.unsplash.com/z-Lvc04qYaQ",
+      "ingredients": [
+        {
+          "amount": "160g",
+          "name": "all purpose flour"
+        },
+        {
+          "amount": "60g",
+          "name": "cacao powder"
+        },
+        {
+          "amount": "160g",
+          "name": "fine sugar"
+        },
+        {
+          "amount": "5g",
+          "name": "baking powder"
+        },
+        {
+          "amount": "3g",
+          "name": "baking soda"
+        },
+        {
+          "amount": "1",
+          "name": "egg"
+        },
+        {
+          "amount": "1",
+          "name": "egg yolk"
+        },
+        {
+          "amount": "100g",
+          "name": "yogurt"
+        },
+        {
+          "amount": "150g",
+          "name": "milk"
+        },
+        {
+          "amount": "75g",
+          "name": "butter"
+        },
+        {
+          "amount": "5ml",
+          "name": "vanilla"
+        }
+      ],
+      "direction": [
+        {
+          "step": 1,
+          "text": "Prep oven 175C and baking tray"
+        },
+        {
+          "step": 2,
+          "text": "Mix all dry ingredients together"
+        },
+        {
+          "step": 3,
+          "text": "Mix well all wet ingredients together and pour into the dry ones until no lumps visible"
+        },
+        {
+          "step": 4,
+          "text": "Pour the mixture to baking tray and bake in 20-25mins"
+        },
+        {
+          "step": 5,
+          "text": "Take the cake out and let it cool on a baking rack in 10mins"
+        },
+        {
+          "step": 6,
+          "text": "Decor the cake as your preference"
+        }
+      ],
+      "id": 7
     }
   ]
 }
