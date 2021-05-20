@@ -15,7 +15,7 @@ function RecipeSpa() {
       // if (!recipe) {
       const getRecipe = async () => {
         const resp = await axios.get(
-          "http://just-cook.herokuapp.com/recipes/" + id
+          "https://just-cook.herokuapp.com/recipes/" + id
         );
         const data = resp.data;
         console.log("this is spa ", data);
