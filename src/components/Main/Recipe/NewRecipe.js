@@ -58,7 +58,7 @@ function NewRecipe() {
 
   const sendData = (e) => {
     e.preventDefault();
-    axios.post("http://just-cook.herokuapp.com/add", input);
+    axios.post("https://just-cook.herokuapp.com/add", input);
     // .then(() => window.location.reload());
   };
 
