@@ -18,7 +18,6 @@ function RecipeSpa() {
           "https://just-cook.herokuapp.com/recipes/" + id
         );
         const data = resp.data;
-        console.log("this is spa ", data);
         setRecipe(data);
         setDirections(data.direction);
         setIngredients(data.ingredients);
@@ -30,7 +29,6 @@ function RecipeSpa() {
     [recipe]
   );
 
-  console.log("this is direction ", recipe);
   let recipeData;
 
   if (recipe) {
