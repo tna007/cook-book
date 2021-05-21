@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and styling components from [React Bootstrap](https://react-bootstrap.github.io/). The RESTAPI for recipes info is hosted [here](http://just-cook.herokuapp.com/recipes). For the back-end resources, check my other repository [symfony-recipe](https://github.com/tna007/symfony-recipe)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and styling components from [React Bootstrap](https://react-bootstrap.github.io/). The RESTAPI for recipes info is hosted [here](https://just-cook.herokuapp.com/recipes). For the back-end resources, check my other repository [symfony-recipe](https://github.com/tna007/symfony-recipe)
 
 # [Live page](https://cook-it-peach.vercel.app/)
 
