@@ -12,11 +12,10 @@ const About = () => {
           </Fade>
           <Fade bottom duration={1200}>
             <p>
-              Hey! Glad to see you here. I am a web development in progress and
-              I use ReactJS and PHP mainly as my programming languages. This
-              project is meant to be a simple cook book that can be used as a
-              recipes browser for everyone in everyday. You're cooking something
-              today?
+              Hey! Glad to see you here. I am a web dev in progress and I use
+              ReactJS and PHP mainly as my programming languages. This project
+              is meant to be a simple cook book that can be used as a recipes
+              browser for everyone in everyday. You're cooking something today?
             </p>
           </Fade>
           <hr />
