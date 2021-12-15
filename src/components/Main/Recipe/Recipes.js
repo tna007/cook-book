@@ -6,7 +6,7 @@ import RecipesList from "./RecipesList";
 import RecipeSpa from "./RecipeSpa";
 
 import { Route, Switch, useRouteMatch } from "react-router";
-import { Container, Figure } from "react-bootstrap";
+import { Container, Figure, Spinner } from "react-bootstrap";
 import FigureCaption from "react-bootstrap/esm/FigureCaption";
 
 const Recipes = () => {
@@ -49,6 +49,11 @@ const Recipes = () => {
           />
 
           <section className="recipes mb-5">
+            {!recipesDefault.length && (
+              <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
+            )}
             <RecipesList recipes={searchFiltered} />
           </section>
         </Route>

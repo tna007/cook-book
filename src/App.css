@@ -82,11 +82,13 @@ p {
   object-fit: contain;
 }
 
-img {
-  max-height: 300px;
+.card-img-top {
+  height: 35vh;
   object-fit: cover;
+  object-position: center;
 }
 .recipesList {
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
