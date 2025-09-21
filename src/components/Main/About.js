@@ -1,16 +1,16 @@
 import React from "react";
 import ParticlesBg from "particles-bg";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 const About = () => {
   return (
     <>
       <div className="row banner">
         <div className="banner-text">
-          <Fade bottom>
+          <Fade direction="down">
             <h1 className="responsive-headline">Anh To</h1>
           </Fade>
-          <Fade bottom duration={1200}>
+          <Fade direction="up">
             <p>
               Hey! Glad to see you here. I am a web dev in progress and I use
               ReactJS and PHP mainly as my programming languages. This project
@@ -19,8 +19,8 @@ const About = () => {
             </p>
           </Fade>
           <hr />
-          <Fade bottom duration={2000}>
-            <ul className="social">
+          <Fade direction="left">
+            <ul className="social d-flex ps-0">
               <a
                 href="https://github.com/tna007/cook-book"
                 target="_blank"
