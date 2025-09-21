@@ -4,7 +4,7 @@ import axios from "axios";
 import Search from "./Search";
 import RecipesList from "./RecipesList";
 import RecipeSpa from "./RecipeSpa";
-
+import { supabase } from "../../../utils/supabase";
 import { Route, Switch, useRouteMatch } from "react-router";
 import { Container, Figure, Spinner } from "react-bootstrap";
 import FigureCaption from "react-bootstrap/esm/FigureCaption";
@@ -15,7 +15,8 @@ const Recipes = () => {
 
   useEffect(() => {
     const getRecipes = async () => {
-      const resp = await axios.get("https://just-cook.herokuapp.com/recipes/");
+      const resp = await supabase.from("recipe").select("*");
+
       const data = resp.data;
       setRecipesDefault(data);
     };

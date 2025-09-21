@@ -14,9 +14,9 @@ function RecipeSpa() {
     () => {
       // if (!recipe) {
       const getRecipe = async () => {
-        const resp = await axios.get(
-          "https://just-cook.herokuapp.com/recipes/" + id
-        );
+        const apiBaseUrl =
+          process.env.REACT_APP_API_BASE_URL || "http://localhost:8000";
+        const resp = await axios.get(`${apiBaseUrl}/recipes/${id}`);
         const data = resp.data;
         setRecipe(data);
         setDirections(data.direction);
@@ -82,7 +82,7 @@ function RecipeSpa() {
         <Row>
           <Col>
             <strong>
-              <u className="lead">Directions</u>
+              <u className="lead">Instructions</u>
             </strong>
             <p className="mt-4 mb-5">{direction}</p>
           </Col>
